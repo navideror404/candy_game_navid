@@ -1,0 +1,40 @@
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\bin\Debug\GameNumbers.exe.config
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\bin\Debug\GameNumbers.exe
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\bin\Debug\GameNumbers.pdb
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\obj\Debug\GameNumbers.csprojResolveAssemblyReference.cache
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\obj\Debug\GameNumbers.GameBoardForm.resources
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\obj\Debug\GameNumbers.Properties.Resources.resources
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\obj\Debug\GameNumbers.csproj.GenerateResource.Cache
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\obj\Debug\GameNumbers.exe
+c:\users\amir\documents\visual studio 2015\Projects\GameNumbers\GameNumbers\obj\Debug\GameNumbers.pdb
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\GameNumbers.exe.config
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\GameNumbers.exe
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\GameNumbers.pdb
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\C5.dll
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\C5.xml
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.GameBoardForm.resources
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.exe
+C:\Users\Lenovo\Desktop\projects\amir_8puzzle\GameNumbers\obj\Debug\GameNumbers.pdb
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\GameNumbers.exe.config
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\GameNumbers.exe
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\GameNumbers.pdb
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\C5.dll
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\C5.xml
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.csproj.AssemblyReference.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.csproj.SuggestedBindingRedirects.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.GameBoardForm.resources
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.Properties.Resources.resources
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.csproj.GenerateResource.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.csproj.CoreCompileInputs.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.csproj.CopyComplete
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.exe
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.pdb

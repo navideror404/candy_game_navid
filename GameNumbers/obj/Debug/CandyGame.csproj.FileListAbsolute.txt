@@ -1,0 +1,16 @@
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\CandyGame.exe.config
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\CandyGame.exe
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\CandyGame.pdb
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\C5.dll
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\C5.xml
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.csproj.AssemblyReference.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.csproj.SuggestedBindingRedirects.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\GameNumbers.GameBoardForm.resources
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.Properties.Resources.resources
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.csproj.GenerateResource.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.csproj.CoreCompileInputs.cache
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.csproj.CopyComplete
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.exe
+C:\Users\MohammadReza\Desktop\GameNumbersSolution\GameNumbers\obj\Debug\CandyGame.pdb
