@@ -1,33 +1,36 @@
-﻿using GameNumbers.OOP;
+﻿using CandyGame.OOP;
+using GameNumbers.OOP;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace GameNumbers
 {
     public partial class GameBoardForm : Form
     {
-        public static Color[, ] _arr, _finalArray;
+        Color[,] _arr;
         private TimeSpan _startTime; 
         private int _size;
         private Button _button1, _button2;
-        private string EMPTY_PATH = " ";
-        public static string NewState = "";
         public static int count = 0;
+
+        private Game game;
         public GameBoardForm()
         {
             _size = 7;
+            game = new Game(9000);
+            _arr = new Color[_size, _size];
 
             CleanButtons();
-            _arr = new Color[_size, _size];
-            _finalArray = new Color[_size, _size];
             InitializeComponent();
         }
 
@@ -57,103 +60,24 @@ namespace GameNumbers
             return Controls.OfType<Button>().Where(b => b.Name != "startButton" && b.AccessibleName.Length == 2);
         }
 
-        private Button GetEmptyPlayButton()
+        private void InitilizeButtons()
         {
-            return GetPlayButtons().Where(b => b.Text == EMPTY_PATH).FirstOrDefault();
-        }
-
-        private void ClearButtons()
-        {
-            List<Color> colors = new List<Color>()
-            { 
-                Color.Red, Color.Green, Color.Blue, Color.Magenta, Color.Yellow, Color.Orange,
-            };
-            foreach (var button in GetPlayButtons())
-                button.BackColor = colors[new Random().Next(colors.Count)];
-        }
-        private void InitilizeButtonsRandom(Color[, ] arr)
-        {
-            ClearButtons();
             var buttons = GetPlayButtons()
-                .ToList()
-                .Shuffle();
+                .ToList();
+            
+            int index = 0;
+            var candies = game.GetCandies;
 
-            int i = 0;
-            List<Color> colors = new List<Color>()
+            for (int k = 0; k < _size * _size; k++)
             {
-                Color.Red, Color.Green, Color.Blue, Color.Magenta, Color.Yellow, Color.Orange,
-            };
-            for (int num = 1; num <= (_size * _size) - 1; num++)
-            {
-                buttons[i].Text = "█";
-                buttons[i].BackColor = colors[new Random().Next(colors.Count)];
-                i++;
+                var p = ArrayPosition(buttons[index].AccessibleName);
+                int i = p.X, j = p.Y;
+                _arr[i, j] = candies[i, j].GetColor();
+                buttons[index].BackColor = _arr[i, j];
+                index++;
+
                 Thread.Sleep(1);
             }
-
-            UpdateMatrix(arr);
-        }
-
-        private void UpdateMatrix(Color[, ] arr)
-        {
-            foreach (var button in GetPlayButtons())
-            {
-                var pos = ArrayPosition(button);
-                arr[pos.X, pos.Y] = button.BackColor;
-            }
-        }
-        
-        private bool IsWin()
-        {
-            for (int i = 0; i < _size; i++)
-                for (int j = 0; j < _size; j++)
-                    if (_arr[i, j] != _finalArray[i, j])
-                        return false;
-
-            return true;
-        }
-        private void GameBoardForm_Load(object sender, EventArgs e)
-        {
-            ButtonEnabled(true);
-        }
-
-        private void StartGame()
-        {
-            InitilizeButtonsRandom(_finalArray);
-            ChangeButtonColor(GetPlayButtons().ToList(), Color.Black);
-            startButton.Enabled = gameTime.Enabled = false;
-
-            Thread.Sleep(3000);
-            
-            InitilizeButtonsRandom(_arr);
-            _startTime = new TimeSpan(0, (int)gameTime.Value, 0);
-            ButtonEnabled(true);
-
-            foreach (var radio in Controls.OfType<RadioButton>())
-                radio.Enabled = false;
-
-            gameTimer.Start();
-        }
-        
-        private int[, ] String2IntMatrix(string[, ] arr)
-        {
-            int[,] result = new int[_size, _size];
-            for (int i = 0; i < _size; i++)
-                for (int j = 0; j < _size; j++)
-                    result[i, j] = arr[i, j] == " " ? 0 : int.Parse(arr[i, j]);
-
-            return result;
-
-        }
-
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            StartGame();
-        }
-
-        private Point ArrayPosition(Button button)
-        {
-            return ArrayPosition(button.AccessibleName);
         }
 
         private Point ArrayPosition(string buttonName)
@@ -163,7 +87,32 @@ namespace GameNumbers
 
             return new Point(row, col);
         }
+
+        private void GameBoardForm_Load(object sender, EventArgs e)
+        {
+            ButtonEnabled(true);
+        }
+
+        private void StartGame()
+        {
+            ChangeButtonColor(GetPlayButtons().ToList(), Color.Black);
+            startButton.Enabled = gameTime.Enabled = false;
+
+            Thread.Sleep(1500);
+            
+            InitilizeButtons();
+            _startTime = new TimeSpan(0, (int)gameTime.Value, 0);
+            ButtonEnabled(true);
+
+            
+            gameTimer.Start();
+        }
         
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            StartGame();
+        }
+
         private void ChangeButtonColor(List<Button> buttons, Color color)
         {
             foreach (var button in buttons)
@@ -214,7 +163,7 @@ namespace GameNumbers
         {
             countLabel.Text = $"#: {count}";
 
-            if (IsWin())
+            if (game.isWin)
             {
                 updateLabelTimer.Enabled = false;
                 gameTimer.Stop();
@@ -241,21 +190,26 @@ namespace GameNumbers
             {
                 _button2 = (Button)sender;
 
-                var pos1 = ArrayPosition(_button1);
-                var pos2 = ArrayPosition(_button2);
+                var pos1 = ArrayPosition(_button1.AccessibleName);
+                var pos2 = ArrayPosition(_button2.AccessibleName);
+
+                countLabel.Text = $"#: {++count}";
 
                 if (GetNeighbours(pos1, pos2))
                 {
                     ChangeButtonColor(new List<Button>() { _button1, _button2 }, Color.Lime);
                     await Task.Delay(1000);
-                    ChangeButtonColor(new List<Button>() { _button1, _button2 }, Color.Lime);
 
-                    countLabel.Text = $"#: {++count}";
                     SwapButtonsColor(_button1, _button2);
-                    UpdateMatrix(_arr);
                     ChangeButtonColor(GetPlayButtons().ToList(), Color.Black);
+                    game.Swap(pos1, pos2);
 
-                    if (IsWin())
+                    game.UpdateBoard();
+
+                    InitilizeButtons();
+                    Text = $":Score Needed To Win: {game.LeftOverScore}";
+
+                    if (game.isWin)
                     {
                         gameTimer.Stop();
                         ButtonEnabled(false);
@@ -268,7 +222,6 @@ namespace GameNumbers
                     await Task.Delay(1000);
 
                     ChangeButtonColor(GetPlayButtons().ToList(), Color.Black);
-
                 }
 
                 CleanButtons();

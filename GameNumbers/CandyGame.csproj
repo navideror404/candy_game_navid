@@ -58,14 +58,18 @@
     <Compile Include="GameBoardForm.Designer.cs">
       <DependentUpon>GameBoardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OOP\AquaCandy.cs" />
     <Compile Include="OOP\BlueCandy.cs" />
+    <Compile Include="OOP\DarkCandy.cs" />
     <Compile Include="OOP\ICandy.cs" />
     <Compile Include="OOP\Game.cs" />
     <Compile Include="OOP\GoldCandy.cs" />
     <Compile Include="OOP\GreenCandy.cs" />
     <Compile Include="OOP\ListExtensions.cs" />
+    <Compile Include="OOP\PinkCandy.cs" />
     <Compile Include="OOP\Player.cs" />
     <Compile Include="OOP\RedCandy.cs" />
+    <Compile Include="OOP\SnowCandy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameBoardForm.resx">
